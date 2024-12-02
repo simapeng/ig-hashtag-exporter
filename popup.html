@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="tailwind.min.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      background-color: #f5f5f7;
+      color: #1d1d1f;
+    }
+    .container {
+      background-color: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn {
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    .title {
+      background: linear-gradient(90deg, #06c 0%, #4d9aff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="w-[500px] p-6 font-sans">
+  <div class="container p-6 flex flex-col">
+    <!-- Header -->
+    <h1 class="text-3xl font-bold mb-2 title">IG Hashtag User Exporter</h1>
+    <p class="text-sm text-gray-500 mb-6">Export users from Instagram hashtag posts</p>
+    
+    <!-- Hashtag Display -->
+    <div class="mb-6">
+      <span class="text-lg font-semibold text-gray-700">Current Hashtag:</span>
+      <span id="currentHashtag" class="text-lg font-bold text-blue-600 ml-2">#example</span>
+    </div>
+    
+    <!-- Control Section -->
+    <div class="flex items-center justify-between mb-6">
+      <button id="toggleBtn" class="btn flex items-center px-4 py-2 bg-blue-600 text-white rounded-full">
+        <svg id="btnIcon" class="w-5 h-5 text-white mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span id="btnText">Start Collecting</span>
+      </button>
+      
+      <div class="text-base font-medium text-gray-700">
+        IG Users Collected: <span id="hrefCount" class="text-blue-600 font-bold">0</span>
+      </div>
+    </div>
+    
+    <!-- Action Buttons -->
+    <div class="flex justify-end space-x-4">
+      <button id="exportBtn" 
+              class="btn px-4 py-2 bg-blue-600 text-white rounded-full">
+        Export CSV
+      </button>
+      <button id="clearBtn" 
+              class="btn px-4 py-2 bg-gray-200 text-gray-800 rounded-full">
+        Clear All
+      </button>
+    </div>
+    
+    <!-- Version -->
+    <div class="mt-6 text-center text-sm text-gray-500">
+      Version 1.0
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
