@@ -120,3 +120,4 @@ For issues, feature requests, or questions:
 2. Provide detailed information about your problem
 3. Include steps to reproduce if applicable
 
+Feel free to contribute to the project by opening a pull request.
